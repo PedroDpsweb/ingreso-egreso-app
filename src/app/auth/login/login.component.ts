@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.loginForm = this.fb.group({
       email: ['', [Validators.email]],
     password: ['',[Validators.required]]} );
-    console.log('suscrito');
 
     this.uiSubscription = this.store.select('ui').subscribe(ui => this.cargando = ui.isLoading );
   }
